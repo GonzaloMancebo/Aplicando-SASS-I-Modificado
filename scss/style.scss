@@ -1,0 +1,48 @@
+@import "../paginas_estilos/globales";
+@import "../paginas_estilos/index";
+@import "../paginas_estilos/variable";
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 100vh;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+  header {
+    grid-area: header;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: greenyellow;
+          }
+        }
+      }
+    }
+    h1 {
+      color: blue;
+    }
+  }
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
